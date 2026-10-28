@@ -1,0 +1,28 @@
+{
+  "name": "@leadkiln/worker",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Hosted multi-tenant API, cron and queue consumer (Cloudflare Workers).",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p .",
+    "dev": "wrangler dev",
+    "db:migrate:local": "wrangler d1 migrations apply leadkiln --local",
+    "db:migrate": "wrangler d1 migrations apply leadkiln --remote",
+    "deploy": "pnpm --filter @leadkiln/web build && wrangler deploy"
+  },
+  "dependencies": {
+    "@leadkiln/core": "workspace:*",
+    "@leadkiln/engine": "workspace:*",
+    "@leadkiln/llm": "workspace:*",
+    "@leadkiln/sources": "workspace:*",
+    "hono": "^4.13.14"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261028.1",
+    "wrangler": "^4.154.0"
+  }
+}

@@ -1,0 +1,12 @@
+# Copy to .dev.vars for `pnpm --filter @leadkiln/worker dev`. Never commit .dev.vars.
+APP_URL=http://localhost:8787
+# "log" prints sign-in links and digests to the terminal instead of sending them
+RESEND_API_KEY=log
+LEADKILN_FROM_EMAIL=Leadkiln <hello@leadkiln.com>
+# openssl rand -base64 32
+LEADKILN_ENCRYPTION_KEY=
+ANTHROPIC_API_KEY=
+LEMONSQUEEZY_API_KEY=
+LEMONSQUEEZY_STORE_ID=
+LEMONSQUEEZY_WEBHOOK_SECRET=
+LEMONSQUEEZY_VARIANTS={}

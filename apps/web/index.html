@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leadkiln · People asking for what you sell, every morning</title>
+    <meta
+      name="description"
+      content="Leadkiln reads Hacker News, Reddit, RemoteOK, Product Hunt, Google Maps and any RSS feed for people asking for what you sell, scores each one, and drafts a first message you send yourself."
+    />
+    <link rel="canonical" href="https://leadkiln.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://leadkiln.com/" />
+    <meta property="og:title" content="Leadkiln · People asking for what you sell, every morning" />
+    <meta
+      property="og:description"
+      content="Public posts from people who need your service, scored with reasons, each with a first message built from your own words. You send it."
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Leadkiln",
+        "url": "https://leadkiln.com/",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "description": "Finds people asking in public for what you sell, scores each one and drafts a first message you send yourself."
+      }
+    </script>
+    <link rel="stylesheet" href="/site.css" />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="top">
+      <div class="wrap top-in">
+        <a class="brand" href="/">
+          <svg viewBox="0 0 32 32" aria-hidden="true">
+            <rect width="32" height="32" rx="9" fill="var(--accent)" />
+            <circle cx="14.5" cy="14.5" r="6" fill="none" stroke="var(--accent-fg)" stroke-width="2.4" />
+            <path d="m19 19 5 5" stroke="var(--accent-fg)" stroke-width="2.6" stroke-linecap="round" />
+            <circle cx="14.5" cy="14.5" r="2" fill="var(--accent-fg)" />
+          </svg>
+          Leadkiln
+        </a>
+        <nav aria-label="Main">
+          <a class="hide-sm" href="#how">How it works</a>
+          <a class="hide-sm" href="#sources">Sources</a>
+          <a class="hide-sm" href="#pricing">Pricing</a>
+          <a class="btn btn-primary" href="/app/login">Start free</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="wrap hero">
+        <p class="eyebrow">Open source · Nothing is sent for you</p>
+        <h1>People asking for what you sell, found every morning</h1>
+        <p class="lead">
+          Leadkiln reads public posts on Hacker News, Reddit, RemoteOK, Product Hunt, Google Maps and any RSS feed. It
+          keeps the ones that ask for what you do, scores each with its reasons, and drafts a first message from your
+          own words. You read it, make it yours and send it.
+        </p>
+        <p class="cta-row">
+          <a class="btn btn-primary btn-lg" href="/app/login">Start with 60 free leads</a>
+          <a class="btn btn-lg" href="#how">See how it works</a>
+        </p>
+        <p class="fine">No card needed. Built for freelancers, studios, agencies and local services.</p>
+
+        <figure class="mock" aria-label="An example lead as it appears in the Leadkiln inbox">
+          <div class="mock-row">
+            <span class="mock-score">85</span>
+            <div>
+              <p class="mock-title">r/smallbusiness: Looking for someone to automate our booking emails</p>
+              <p class="mock-meta">Automation · Reddit · 3 h ago · example</p>
+            </div>
+          </div>
+          <ul class="mock-why">
+            <li>Asks for automation</li>
+            <li>Mentions a budget or rate</li>
+            <li>In a market you want (US)</li>
+            <li>Posted in the last day</li>
+          </ul>
+          <p class="mock-draft">
+            Hi Dana,<br /><br />You want your booking confirmations and reminders to go out without anyone copying them
+            by hand.<br /><br />I'm a freelance developer who builds automations for small teams. [Your proof, word for
+            word.] More here: yoursite.com<br /><br />Would a 15-minute call this week help?
+          </p>
+        </figure>
+      </section>
+
+      <section class="wrap" id="how">
+        <h2>How it works</h2>
+        <ol class="steps">
+          <li>
+            <h3>Describe what you sell</h3>
+            <p>
+              Your offers and the words clients use for them, a short introduction, and a few sentences of proof: work
+              you've shipped, as you'd say it. That's everything a message will ever say about you.
+            </p>
+          </li>
+          <li>
+            <h3>Pick where your clients ask</h3>
+            <p>
+              Turn on the sources that fit: hiring threads, subreddits, launch sites, local businesses with weak
+              websites, or any job board's RSS feed. Each is read through its public API or feed.
+            </p>
+          </li>
+          <li>
+            <h3>Read the morning digest</h3>
+            <p>
+              Every day at your hour, new matches arrive in your inbox, by email and on Slack or Discord if you like,
+              best fit first. Each shows why it scored what it did and what one look at their homepage showed.
+            </p>
+          </li>
+          <li>
+            <h3>Send it yourself</h3>
+            <p>
+              Edit the draft, copy it, reply where they posted. Mark it sent, replied or won, and export everything to
+              CSV whenever you want.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="wrap" id="sources">
+        <h2>Where it looks</h2>
+        <div class="grid">
+          <div class="tile">
+            <h3>Hacker News</h3>
+            <p>
+              Contract and freelance posts in the monthly hiring thread, and Show HN launches that match your phrases.
+            </p>
+          </div>
+          <div class="tile">
+            <h3>Reddit</h3>
+            <p>New posts asking for help or someone to hire, in the subreddits you choose.</p>
+          </div>
+          <div class="tile">
+            <h3>RemoteOK</h3>
+            <p>Contract and part-time remote roles that name your offers or tools.</p>
+          </div>
+          <div class="tile">
+            <h3>Product Hunt</h3>
+            <p>New launches matching your phrases, with the maker and their site.</p>
+          </div>
+          <div class="tile">
+            <h3>Google Maps</h3>
+            <p>Established local businesses with no website, or one that's broken or thin.</p>
+          </div>
+          <div class="tile">
+            <h3>Any RSS feed</h3>
+            <p>Job boards, forum tags, saved searches: if it has a feed, it's a source.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="wrap narrow" id="rules">
+        <h2>What it will never do</h2>
+        <ul class="rules">
+          <li>
+            <strong>Send a message for you.</strong> Every message is read and sent by a person. No cold-email blasts,
+            no auto-DMs.
+          </li>
+          <li>
+            <strong>Make up claims.</strong> A draft says only your introduction and proof, word for word. The AI writes
+            one sentence about what the lead needs, and drafts that would claim anything else fall back to plain text.
+          </li>
+          <li>
+            <strong>Scrape behind a login.</strong> Sources are public APIs and feeds, read the way their owners allow,
+            and every lead links back to the original post.
+          </li>
+          <li>
+            <strong>Probe anyone's site.</strong> It loads a lead's homepage once, like any visitor, and notes only what
+            that showed.
+          </li>
+        </ul>
+      </section>
+
+      <section class="wrap" id="pricing">
+        <h2>Pricing</h2>
+        <div class="grid">
+          <div class="tile">
+            <h3>Trial</h3>
+            <p class="big">Free</p>
+            <p>60 leads a month, one workspace, every source.</p>
+          </div>
+          <div class="tile">
+            <h3>Solo</h3>
+            <p>600 leads a month, one workspace, email and webhook digests.</p>
+          </div>
+          <div class="tile">
+            <h3>Agency</h3>
+            <p>3,000 leads a month and ten workspaces, one per client.</p>
+          </div>
+        </div>
+        <p class="fine">
+          Current prices are shown at checkout. Sources that need your own key (Google Places, Product Hunt, Reddit)
+          bill or limit you directly.
+        </p>
+      </section>
+
+      <section class="wrap narrow" id="self-host">
+        <h2>Run it yourself</h2>
+        <p>
+          Leadkiln is open source under AGPL-3.0. The command line runs a search from a config file and writes the leads
+          to Markdown and JSON; the hosted app runs on Cloudflare Workers.
+          <a href="https://github.com/Hansraj8149/leadkiln">The code is on GitHub</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer class="wrap foot">
+      <p>Leadkiln · <a href="https://github.com/Hansraj8149/leadkiln">GitHub</a> · <a href="/app/login">Sign in</a></p>
+    </footer>
+  </body>
+</html>

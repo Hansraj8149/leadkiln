@@ -1,0 +1,21 @@
+{
+  "name": "@leadkiln/cli",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Self-hosted command line: leadkiln init | run | sources.",
+  "license": "AGPL-3.0-only",
+  "type": "module",
+  "bin": {
+    "leadkiln": "src/index.ts"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "typecheck": "tsc -p ."
+  },
+  "dependencies": {
+    "@leadkiln/core": "workspace:*",
+    "@leadkiln/engine": "workspace:*",
+    "@leadkiln/llm": "workspace:*",
+    "@leadkiln/sources": "workspace:*"
+  }
+}

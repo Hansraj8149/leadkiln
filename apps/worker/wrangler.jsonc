@@ -1,0 +1,42 @@
+{
+  "$schema": "../../node_modules/wrangler/config-schema.json",
+  "name": "leadkiln",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "compatibility_flags": ["nodejs_compat"],
+  // Marketing page and dashboard, built by apps/web. /api/* and /app/* reach the Worker first.
+  "assets": {
+    "directory": "../web/dist",
+    "binding": "ASSETS",
+    "not_found_handling": "404-page",
+    "run_worker_first": ["/api/*", "/app", "/app/*"],
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "leadkiln",
+      // From `wrangler d1 create leadkiln`
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations",
+    },
+  ],
+  "queues": {
+    "producers": [{ "binding": "RUNS", "queue": "leadkiln-runs" }],
+    "consumers": [
+      { "queue": "leadkiln-runs", "max_batch_size": 1, "max_retries": 1, "dead_letter_queue": "leadkiln-runs-dlq" },
+    ],
+  },
+  // Workers AI writes the one sentence per lead. Free tier covers a small workspace.
+  "ai": { "binding": "AI" },
+  // Every hour: queue the workspaces whose daily run is due.
+  "triggers": { "crons": ["0 * * * *"] },
+  "observability": { "enabled": true },
+  "vars": {
+    "APP_URL": "https://leadkiln.com",
+    // A Workers AI model id (@cf/...), or a Claude model id to use ANTHROPIC_API_KEY instead.
+    "LEADKILN_MODEL": "@cf/mistralai/mistral-small-3.1-24b-instruct",
+    "LEMONSQUEEZY_VARIANTS": "{}",
+  },
+  // Secrets (wrangler secret put): RESEND_API_KEY, LEADKILN_FROM_EMAIL, LEADKILN_ENCRYPTION_KEY, and optionally
+  // ANTHROPIC_API_KEY, LEMONSQUEEZY_API_KEY, LEMONSQUEEZY_STORE_ID, LEMONSQUEEZY_WEBHOOK_SECRET
+}

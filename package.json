@@ -1,0 +1,38 @@
+{
+  "name": "leadkiln",
+  "private": true,
+  "description": "Finds people asking in public for what you sell, scores each one and drafts a first message you send yourself.",
+  "license": "AGPL-3.0-only",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "eslint .",
+    "typecheck": "turbo run typecheck",
+    "test": "vitest run",
+    "format": "prettier -w .",
+    "format:check": "prettier -c .",
+    "leadkiln": "tsx apps/cli/src/index.ts"
+  },
+  "packageManager": "pnpm@10.29.2",
+  "engines": {
+    "node": ">=22.15.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.5",
+    "eslint": "^10.13.0",
+    "prettier": "^3.9.10",
+    "tsx": "^4.23.15",
+    "turbo": "^2.11.10",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.72.1",
+    "vitest": "^5.0.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "workerd",
+      "sharp"
+    ]
+  }
+}
